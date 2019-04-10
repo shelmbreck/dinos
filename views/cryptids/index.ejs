@@ -1,0 +1,14 @@
+<h1>Look at all those Chickens!</h1>
+
+<h3>List o' Dinos</h3>
+<ul>
+    <% myCryptids.forEach((cryptid, index) => { %>
+        <li><a href="/cryptid/<%= index %>"><%= cryptid.name %> is a <%= cryptid.type %></a></li>
+    <% }) %>
+</ul>
+
+<form method="GET" action="/dinosaurs">
+    <label for="nameFilter">Filter by Name</label>
+    <input id="nameFilter" type="text" name="nameFilter">
+    <input type="submit">
+</form>
